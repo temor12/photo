@@ -187,6 +187,13 @@
             color: var(--text-secondary);
         }
         
+        .header-buttons {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-shrink: 0;
+        }
+        
         .theme-toggle {
             background: var(--card-bg);
             border: 1px solid var(--border-color);
@@ -207,6 +214,31 @@
             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             box-shadow: 0 0 10px rgba(37, 99, 235, 0.3);
             transform: scale(1.05);
+        }
+        
+        /* زر الرجوع */
+        .back-button {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            color: var(--text-color);
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+            flex-shrink: 0;
+            text-decoration: none;
+        }
+        
+        .back-button:hover {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            box-shadow: 0 0 10px rgba(37, 99, 235, 0.3);
+            transform: scale(1.05);
+            color: white;
         }
         
         /* Navigation Styles */
@@ -629,7 +661,7 @@
                 font-size: 0.75rem;
             }
             
-            .theme-toggle {
+            .theme-toggle, .back-button {
                 width: 28px;
                 height: 28px;
                 font-size: 0.8rem;
@@ -706,6 +738,13 @@
                 gap: 8px;
             }
             
+            .header-buttons {
+                order: -1;
+                width: 100%;
+                justify-content: center;
+                margin-bottom: 8px;
+            }
+            
             .thumbnail {
                 width: 50px;
                 height: 50px;
@@ -731,7 +770,7 @@
                 flex: 1;
             }
             
-            .theme-toggle {
+            .theme-toggle, .back-button {
                 flex-shrink: 0;
             }
             
@@ -755,9 +794,14 @@
                         <p class="subtitle">أفضل المنتجات التقنية</p>
                     </div>
                 </div>
-                <button class="theme-toggle" id="theme-toggle">
-                    <i class="fas fa-sun"></i>
-                </button>
+                <div class="header-buttons">
+                    <a href="https://alkarradatech.xyz/index.html/" class="back-button" title="العودة للصفحة الرئيسية">
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <button class="theme-toggle" id="theme-toggle" title="تبديل الوضع الليلي">
+                        <i class="fas fa-sun"></i>
+                    </button>
+                </div>
             </div>
         </div>
     </header>
